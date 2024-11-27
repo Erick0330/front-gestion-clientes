@@ -1,7 +1,7 @@
 # Customer Management System Frontend
 
 
-<img src="Captura de Pantalla (40).png">
+<img src="/Captura de Pantalla (40).png">
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.12.
 
 ## Development server
