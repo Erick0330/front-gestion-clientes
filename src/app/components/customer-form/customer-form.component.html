@@ -1,4 +1,7 @@
-<div class="flex justify-content-center align-items-center min-h-screen w-full">
+<body>
+  <div
+    class="flex justify-content-center align-items-center min-h-screen w-full"
+  >
     <p-card header="Formulario cliente" class="w-10">
       <form
         [formGroup]="formCostumer"
@@ -34,23 +37,28 @@
             class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full"
           />
         </div>
-  
+
         <div class="field">
           <p-fileUpload
             mode="basic"
-            [chooseLabel]="edit? 'Cambiar imagen' : 'Seleccionar imagen'"
+            [chooseLabel]="edit ? 'Cambiar imagen' : 'Seleccionar imagen'"
             chooseIcon="pi pi-upload"
             name="demo[]"
             [customUpload]="true"
             accept="image/*"
             maxFileSize="1000000"
-            (onSelect)="edit ? changeImage($event): onFileSelected($event)"
+            (onSelect)="edit ? changeImage($event) : onFileSelected($event)"
           />
         </div>
-  
-        <div class="flex gap-2">
-          <p-button label="Guardar" [loading]="isSaveInProgress" type="submit" />
+
+        <div class="flex  gap-2">
+          <p-button
+            label="Guardar"
+            [loading]="isSaveInProgress"
+            type="submit"
+          />
         </div>
       </form>
     </p-card>
   </div>
+</body>

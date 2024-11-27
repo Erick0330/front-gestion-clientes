@@ -4,3 +4,31 @@
 a{
     text-decoration: none;
 }
+
+header{
+    width: 80%;
+
+    /* padding-left: 50px; */
+}
+
+
+header h1{
+    align-self: center;
+    font-size: 40px;
+}
+
+body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+main{
+    width: 100%;
+}
+  
+  app-root{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
