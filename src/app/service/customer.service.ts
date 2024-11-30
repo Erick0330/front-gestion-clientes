@@ -32,7 +32,7 @@ export class CustomerService {
   }
 
   updateCustomer(customer:Customer):Observable<Customer>{
-    return this.http.put<Customer>(this.api, customer);
+    return this.http.put<Customer>(this.api + '/' + customer.id, customer);
   }
 
   deleteCustomer(id:number) {
