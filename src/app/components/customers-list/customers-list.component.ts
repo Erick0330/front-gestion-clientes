@@ -52,7 +52,7 @@ export class CustomerListComponent  implements OnInit{
         this.messageService.add({
           severity: 'error',
             summary: 'Error',
-            detail: 'No se pudo eliminar el libro'
+            detail: 'No se pudo eliminar el cliente'
         });
       }
     })
