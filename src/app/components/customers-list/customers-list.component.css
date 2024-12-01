@@ -17,10 +17,6 @@ p-card img{
     border-radius: 2%;
 }
 
-body{
-    display: flex;
-    align-items: center;
-}
 
 .flex{
     padding: 20px;

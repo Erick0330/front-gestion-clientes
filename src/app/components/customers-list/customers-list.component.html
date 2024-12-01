@@ -1,4 +1,4 @@
-<body>
+
   <div class="flex flex-column gap-2">
     <div class="flex gap-4 flex-wrap">
       @for (c of customers; track c.id){
@@ -33,7 +33,7 @@
         </ng-template>
       </p-card>
       }@empty {
-      <p>No existen clientes</p>
+      <h2>No existen clientes</h2>
       }
     </div>
 
@@ -44,5 +44,5 @@
       Crear nuevo cliente
     </a>
   </div>
-</body>
+
 
