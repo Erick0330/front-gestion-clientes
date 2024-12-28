@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Customer } from '../Entitys/customer';
+import { User } from '../Entitys/user';
 
 
 @Injectable({
@@ -28,7 +29,7 @@ export class CustomerService {
     formData.append('customer', new Blob([JSON.stringify(customer)], {type:'application/json'}));
     formData.append('file', image)
 
-    return this.http.post<Customer>(this.api, formData);
+    return this.http.post<Customer>(this.api + '/admin', formData);
   }
 
   updateCustomer(customer:Customer):Observable<Customer>{
@@ -36,12 +37,16 @@ export class CustomerService {
   }
 
   deleteCustomer(id:number) {
-    return this.http.delete(this.api + '/' + id);
+    return this.http.delete(this.api + '/admin/' + id);
   }
 
   updateCustomerImage(id:number, image:File):Observable<Customer>{
     const formData = new FormData()
     formData.append('file', image)
-    return this.http.put<Customer>(this.api + '/' + id+'/image', formData);
+    return this.http.put<Customer>(this.api + '/admin/' + id+'/image', formData);
   }
+
+  // login(user:User):Observable<string>{
+  //   return this.http.post<string>(this.api)
+  // }
 }

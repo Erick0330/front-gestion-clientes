@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators} from '@angular/forms';
-import { CustomerService } from '../../service/customer.service';
+import { CustomerService } from '../../services/customer.service';
 import { ButtonModule } from 'primeng/button';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { MessageService } from 'primeng/api';
@@ -25,7 +25,7 @@ import { FileUploadModule } from 'primeng/fileupload';
   styleUrl: './customer-form.component.css'
 })
 export class CustomerFormComponent {
-  
+
   formCostumer!: FormGroup;
   isSaveInProgress: boolean = false;
   edit:boolean = false;
@@ -131,7 +131,7 @@ export class CustomerFormComponent {
             detail: 'Imagen actualizada correctamente'
         });
         this.isSaveInProgress=false
-        
+
       },
       error:()=>{
         this.isSaveInProgress=false
@@ -156,7 +156,7 @@ export class CustomerFormComponent {
     this.isSaveInProgress=true
     this.customerService.updateCustomer(this.formCostumer.value).subscribe({
       next:()=>{
-        
+
         this.messageService.add({
           severity: 'success',
             summary: 'Guardado',

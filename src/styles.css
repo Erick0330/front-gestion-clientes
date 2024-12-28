@@ -5,28 +5,59 @@ a{
     text-decoration: none;
 }
 
-header{
-    width: 80%;
+/* header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 20px 0 20px 50px;
+  background-color: #62ca65;
 }
 
+  header h1 {
+  font-size: 40px;
+  color: #FFFFFF;
+} */
 
-header h1{
-    align-self: center;
-    font-size: 40px;
+.navbar{
+  background-color: #62ca65 !important;
+
+  display: flex;
+  justify-content: center !important;
+  align-items: center !important;
+}
+.navbar .title{
+  font-weight: bold;
+  font-size: 40px;
+}
+.navbar a{
+  font-size: 30px;
+  color: #FFFFFF;
 }
 
-body {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
+.navbar .container{
+  width: 100%;
+  margin: 0 !important;
+}
+
 
 main{
     width: 100%;
+    height: 100%;
 }
-  
+
   app-root{
     display: flex;
     width: 100%;
     justify-content: center;
+    height: 100%;
+  }
+
+  html, body{
+    height: 100%;
+  }
+
+  body{
+    display: flex;
+    flex-direction: column;
+    background-color: #F0F2F5 !important;
   }

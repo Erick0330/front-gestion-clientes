@@ -1,0 +1,39 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #F0F2F5;
+  height: 100%;
+}
+
+.body {
+  background-color: #FFFFFF;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.login-image {
+  margin-bottom: 1rem;
+}
+
+h2 {
+  color: #333333;
+}
+
+.form-floating .form-control {
+  margin-bottom: 1rem;
+}
+
+.btn-primary {
+  background-color: #4CAF50;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #45A049;
+}
+
+p a {
+  color: #FF5733;
+}

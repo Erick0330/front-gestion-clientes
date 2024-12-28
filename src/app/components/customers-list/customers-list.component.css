@@ -22,3 +22,12 @@ p-card img{
     padding: 20px;
 }
 
+a{
+  text-decoration: none;
+  color: white;
+}
+
+.p-button{
+  background-color: #4CAF50;
+  border: none;
+}

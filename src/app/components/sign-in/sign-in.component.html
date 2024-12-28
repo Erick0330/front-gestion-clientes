@@ -1,0 +1,61 @@
+<div class="wrapper">
+  <div class="body">
+    <form [formGroup]="registerForm" (ngSubmit)="submitForm()">
+      <img class="" src="/assets/R.png" width="250px" alt="" />
+      <h2>Registrarme</h2>
+      <div class="form-floating mb-3">
+        <input
+          type="text"
+          class="form-control"
+          id="floatingInput"
+          placeholder="name"
+          formControlName="userName"
+        />
+        <label for="floatingInput">UserName</label>
+      </div>
+      <div class="form-floating mb-3">
+        <input
+          type="password"
+          class="form-control"
+          id="floatingPassword"
+          placeholder="Password"
+          formControlName="password"
+        />
+        <label for="floatingPassword">Password</label>
+      </div>
+      <div class="form-floating mb-3">
+        <input
+          type="password"
+          class="form-control"
+          id="floatingrepeatPassword"
+          placeholder="Password"
+          formControlName="repeatPassword"
+        />
+        <label for="floatingrepeatPassword">Repeat Password</label>
+      </div>
+      <div class="form-floating mb-3" formGroupName="role">
+        <select class="form-control" id="floatingRole" formControlName="name">
+          <option value="">Seleccione un Rol</option>
+          <option *ngFor="let role of roles" [value]="role.name">
+            {{ role.name }}
+          </option>
+        </select>
+        <label for="floatingRole">Role</label>
+      </div>
+      <div class="d-grid gap-2">
+        <button
+          class="btn btn-primary"
+          type="submit"
+          [disabled]="registerForm.invalid"
+        >
+          Button
+        </button>
+      </div>
+      <div>
+        <p class="mt-3">
+          Ya tengo cuenta? <a routerLink="/logIn">Iniciar sesión</a>
+        </p>
+      </div>
+    </form>
+  </div>
+</div>

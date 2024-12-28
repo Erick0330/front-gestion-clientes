@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { OnInit } from '@angular/core';
 import { Customer } from '../../Entitys/customer';
-import { CustomerService } from '../../service/customer.service';
+import { CustomerService } from '../../services/customer.service';
 import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
 import { RouterModule } from '@angular/router';
@@ -15,12 +15,12 @@ import { MessageService } from 'primeng/api';
   styleUrl: './customers-list.component.css'
 })
 export class CustomerListComponent  implements OnInit{
-  
+
   customers : Customer[] = [];
   isDeleteInProgress:boolean=false
 
   constructor(private customerService : CustomerService, private messageService: MessageService){}
-  
+
   ngOnInit(): void {
     this.listCustomers();
   }
@@ -35,7 +35,7 @@ export class CustomerListComponent  implements OnInit{
   }
 
   deleteCustomer(id:number){
-   
+
     this.isDeleteInProgress=true
     this.customerService.deleteCustomer(id).subscribe({
       next:()=>{
