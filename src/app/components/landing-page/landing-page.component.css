@@ -56,3 +56,23 @@
   z-index: -9;
 }
 
+
+.start-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: transform 0.3s ease, font-size 0.3s ease;
+  font-weight: bold;
+  font-size: 30px;
+  margin-left: 30px;
+}
+
+.start-button:hover {
+  transform: scale(1.1);
+  font-size: 1.9rem;
+  background-color: #41a045;
+}

@@ -9,6 +9,7 @@ import { InputNumberModule } from 'primeng/inputnumber';
 import { CardModule } from 'primeng/card';
 import { FileSelectEvent } from 'primeng/fileupload';
 import { FileUploadModule } from 'primeng/fileupload';
+import { NavbarComponent } from '../navbar/navbar.component';
 
 @Component({
   selector: 'app-customer-form',
@@ -20,7 +21,8 @@ import { FileUploadModule } from 'primeng/fileupload';
     InputTextModule,
     InputNumberModule,
     CardModule,
-    FileUploadModule],
+    FileUploadModule,
+  NavbarComponent],
   templateUrl: './customer-form.component.html',
   styleUrl: './customer-form.component.css'
 })

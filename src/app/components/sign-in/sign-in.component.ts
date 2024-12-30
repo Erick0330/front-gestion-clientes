@@ -5,6 +5,7 @@ import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } 
 import { Role } from '../../Entitys/role';
 import { User } from '../../Entitys/user';
 import { NgFor } from '@angular/common';
+import { NavbarComponent } from '../navbar/navbar.component';
 
 
 @Component({
@@ -12,7 +13,8 @@ import { NgFor } from '@angular/common';
   standalone: true,
   imports: [RouterModule,
     ReactiveFormsModule,
-    NgFor],
+    NgFor,
+    NavbarComponent],
   templateUrl: './sign-in.component.html',
   styleUrl: './sign-in.component.css'
 })

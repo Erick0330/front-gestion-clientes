@@ -6,11 +6,12 @@ import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
 import { Router, RouterModule } from '@angular/router';
 import { MessageService } from 'primeng/api';
+import { NavbarComponent } from '../navbar/navbar.component';
 
 @Component({
   selector: 'app-customers-list',
   standalone: true,
-  imports: [ButtonModule, CardModule, RouterModule],
+  imports: [ButtonModule, CardModule, RouterModule, NavbarComponent],
   templateUrl: './customers-list.component.html',
   styleUrl: './customers-list.component.css'
 })
@@ -60,23 +61,7 @@ export class CustomerListComponent implements OnInit {
     })
   }
 
-  createCustomerValidation() {
-    console.log("Funciona")
-    const id = 1;
-    this.customerService.getCustomerById(id).subscribe({
-      next: foundCustomer => {
-        this.router.navigateByUrl('/customer-form/new')
-      },
-      error: () => {
-        this.messageService.add({
-          severity: 'error',
-          summary: 'Error',
-          detail: 'No tiene la autorización'
-        });
-        this.router.navigateByUrl('/home')
-      }
-    });
-  }
+
 }
 
 

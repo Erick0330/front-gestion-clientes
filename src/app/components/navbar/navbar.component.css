@@ -1,0 +1,63 @@
+
+.custom-navbar {
+  background-color: #4CAF50;
+  /* Color de fondo del navbar */
+  padding: 15px 20px;
+  transition: background-color 0.3s ease;
+  /* Transición suave */
+}
+
+.custom-navbar .title {
+  font-size: 2rem;
+  /* Tamaño más grande para el título */
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+}
+
+.custom-navbar .nav-link {
+  color: white;
+  font-size: 24px !important;
+  margin-left: 15px;
+  transition: transform 0.3s ease, font-size 0.3s ease;
+  /* Transición de crecimiento */
+  font-size: 1.2rem;
+  /* Tamaño de fuente más grande */
+  cursor: pointer;
+}
+
+.custom-navbar .nav-link:hover {
+  color: white;
+  transform: scale(1.1);
+  /* Crecimiento al pasar el mouse */
+  font-size: 1.3rem;
+  /* Crecimiento del texto al pasar el mouse */
+}
+
+
+
+.custom-navbar .navbar-toggler {
+  border: none;
+}
+
+
+@media (max-width: 767.98px) {
+  .custom-navbar .title {
+    font-size: 1.5rem;
+    /* Tamaño del texto reducido en pantallas pequeñas */
+    margin-left: 0;
+    white-space: normal;
+    /* Permite ajuste automático de texto */
+    word-break: break-word;
+    /* Permite el corte de palabras largas */
+    width: 40%;
+  }
+
+  .custom-navbar .nav-link {
+    font-size: 1rem;
+  }
+
+  .navbar-toggler {
+    margin-right: 10px;
+  }
+}
