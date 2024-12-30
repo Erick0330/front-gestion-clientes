@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { JwtService } from '../../services/jwt.service';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Role } from '../../Entitys/role';
@@ -25,7 +25,8 @@ export class SignInComponent implements OnInit {
     { name: 'USER', id: 2 }];
 
   constructor(private service: JwtService,
-    private fb: FormBuilder) {
+    private fb: FormBuilder,
+  private router: Router) {
 
   }
 
@@ -55,7 +56,13 @@ export class SignInComponent implements OnInit {
 
   submitForm() {
 
-    const selectedRoleName = this.registerForm.get('role.name')?.value; if (selectedRoleName === 'ADMIN') { this.registerForm.get('role.id')?.setValue('1'); } else if (selectedRoleName === 'USER') { this.registerForm.get('role.id')?.setValue('2'); }
+    const selectedRoleName = this.registerForm.get('role.name')?.value;
+
+    if (selectedRoleName === 'ADMIN') {
+      this.registerForm.get('role.id')?.setValue('1');
+    } else if (selectedRoleName === 'USER') {
+       this.registerForm.get('role.id')?.setValue('2');
+      }
 
     const formData = { ...this.registerForm.value };
     delete formData.repeatPassword;
@@ -64,6 +71,7 @@ export class SignInComponent implements OnInit {
 
     this.service.register(formData as User).subscribe((response: any) => {
       console.log(response);
+      this.router.navigateByUrl('/logIn');
     },
       (error: any) => {
         console.error(error);

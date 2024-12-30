@@ -1,4 +1,4 @@
-<div class="wrapper">
+<div class="wrapper mt-8">
   <div class="body">
     <form [formGroup]="registerForm" (ngSubmit)="submitForm()">
       <img class="" src="/assets/R.png" width="250px" alt="" />
@@ -47,6 +47,7 @@
           class="btn btn-primary"
           type="submit"
           [disabled]="registerForm.invalid"
+
         >
           Button
         </button>

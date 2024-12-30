@@ -65,9 +65,9 @@ export class CustomerFormComponent {
       error:()=>{
         this.messageService.add({severity: 'error',
           summary: 'Error',
-          detail: 'No encontrado'
+          detail: 'No tiene la autorización'
         });
-        this.router.navigateByUrl('/')
+        this.router.navigateByUrl('/home')
       }
     });
   }
@@ -81,14 +81,7 @@ export class CustomerFormComponent {
       });
       return
     }
-    if(!this.selectedFile){
-      this.messageService.add({
-        severity: 'error',
-          summary: 'Error',
-          detail: 'Seleccione una imagen e intente nuevamente'
-      });
-      return
-    }
+
     this.isSaveInProgress=true
     this.customerService.createCustomer(this.formCostumer.value, this.selectedFile).subscribe({
       next:()=>{
@@ -98,7 +91,7 @@ export class CustomerFormComponent {
             detail: 'Cliente guardado correctamente'
         });
         this.isSaveInProgress=false
-        this.router.navigateByUrl('/')
+        this.router.navigateByUrl('/home')
       },
       error:()=>{
         this.isSaveInProgress=false
@@ -163,7 +156,7 @@ export class CustomerFormComponent {
             detail: 'Cliente actualizado correctamente'
         });
         this.isSaveInProgress=false
-        this.router.navigateByUrl('/')
+        this.router.navigateByUrl('/home')
       },
       error:()=>{
         this.isSaveInProgress=false

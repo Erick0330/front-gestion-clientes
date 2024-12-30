@@ -16,4 +16,8 @@ export class JwtService {
   register(signRequest:any):Observable<any>{
     return this.http.post(this.api + 'signup', signRequest)
   }
+
+  login(loginRequest:any):Observable<any>{
+    return this.http.post(this.api + 'login', loginRequest)
+  }
 }

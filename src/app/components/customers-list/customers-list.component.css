@@ -1,33 +1,96 @@
-.guardar {
-    margin: 30px 30px;
+
+
+@media (max-width:921px) {
+  .container{
+    justify-content: center;
+    align-items: center;
+  }
+
+  .sub-container{
+    justify-content: center;
+    align-items: center;
+  }
+
+  .create-button{
+    margin-left: 0;
+  }
 }
 
-
-p-card{
-
-    margin-left: 10px;
-    border: 2px solid black;
-    border-radius: 1.5%;
+.custom-card {
+  margin: 10px 10px;
+  border: 2px solid black;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
 
-
-
-p-card img{
-    border-bottom: 2px solid black;
-    border-radius: 2%;
+.custom-card:hover {
+  transform: scale(1.05);
 }
 
-
-.flex{
-    padding: 20px;
+.card-image {
+  border-bottom: 2px solid black;
+  border-radius: 5px 5px 0 0;
+  transition: opacity 0.3s ease;
 }
 
-a{
+.card-image:hover {
+  opacity: 0.8;
+}
+
+.flex {
+  padding: 20px;
+}
+
+a.custom-link {
   text-decoration: none;
   color: white;
+  margin-right: 10px;
+  transition: transform 0.3s ease, font-size 0.3s ease;
 }
 
-.p-button{
+a.custom-link:hover {
+  transform: scale(1.1);
+  font-size: 1.1rem;
+}
+
+.custom-button, .button-edit {
   background-color: #4CAF50;
   border: none;
+  margin-right: 10px;
+  transition: transform 0.3s ease, font-size 0.3s ease;
+}
+
+.custom-button:hover, .button-edit:hover {
+  transform: scale(1.1);
+  font-size: 1.1rem;
+}
+
+.button-cancel {
+  border: none;
+  margin-right: 10px;
+  transition: transform 0.3s ease, font-size 0.3s ease;
+}
+
+.button-cancel:hover {
+  transform: scale(1.1);
+  font-size: 1.1rem;
+}
+
+.create-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: transform 0.3s ease, font-size 0.3s ease;
+  font-weight: bold;
+  margin-left: 30px;
+}
+
+.create-button:hover {
+  transform: scale(1.1);
+  font-size: 1.1rem;
 }

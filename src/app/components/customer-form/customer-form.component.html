@@ -1,64 +1,63 @@
+<div
+  class="contenedor flex justify-content-center align-items-center min-h-screen w-full"
+>
+  <p-card header="Formulario cliente" class="w-5">
+    <form
+      [formGroup]="formCostumer"
+      (ngSubmit)="edit ? updateCustomer() : createCustomer()"
+      class="flex flex-column gap-2"
+    >
+      <div class="field">
+        <label for="firstName">Firstname</label>
+        <input
+          type="text"
+          id="firstName"
+          formControlName="firstName"
+          class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full"
+        />
+      </div>
+      <div class="field">
+        <label for="lastName">Lastname</label>
+        <input
+          type="text"
+          id="lastName"
+          pInputText
+          formControlName="lastName"
+          class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full"
+        />
+      </div>
+      <div class="field">
+        <label for="mail">Email</label>
+        <input
+          id="mail"
+          type="text"
+          formControlName="email"
+          pInputText
+          class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full"
+        />
+      </div>
 
-  <div
-    class="contenedor flex justify-content-center align-items-center min-h-screen w-full"
-  >
-    <p-card header="Formulario cliente" class="w-10">
-      <form
-        [formGroup]="formCostumer"
-        (ngSubmit)="edit ? updateCustomer() : createCustomer()"
-        class="flex flex-column gap-2"
-      >
-        <div class="field">
-          <label for="firstName">Firstname</label>
-          <input
-            type="text"
-            id="firstName"
-            formControlName="firstName"
-            class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full"
-          />
-        </div>
-        <div class="field">
-          <label for="lastName">Lastname</label>
-          <input
-            type="text"
-            id="lastName"
-            pInputText
-            formControlName="lastName"
-            class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full"
-          />
-        </div>
-        <div class="field">
-          <label for="mail">Email</label>
-          <input
-            id="mail"
-            type="text"
-            formControlName="email"
-            pInputText
-            class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full"
-          />
-        </div>
+      <div class="field">
+        <p-fileUpload
+          mode="basic"
+          [chooseLabel]="edit ? 'Cambiar imagen' : 'Seleccionar imagen'"
+          chooseIcon="pi pi-upload"
+          name="demo[]"
+          [customUpload]="true"
+          accept="image/*"
+          maxFileSize="1000000"
+          (onSelect)="edit ? changeImage($event) : onFileSelected($event)"
+        />
+      </div>
 
-        <div class="field">
-          <p-fileUpload
-            mode="basic"
-            [chooseLabel]="edit ? 'Cambiar imagen' : 'Seleccionar imagen'"
-            chooseIcon="pi pi-upload"
-            name="demo[]"
-            [customUpload]="true"
-            accept="image/*"
-            maxFileSize="1000000"
-            (onSelect)="edit ? changeImage($event) : onFileSelected($event)"
-          />
-        </div>
-
-        <div class="flex  gap-2">
-          <p-button
-            label="Guardar"
-            [loading]="isSaveInProgress"
-            type="submit"
-          />
-        </div>
-      </form>
-    </p-card>
-  </div>
-
+      <div class="flex gap-2">
+        <p-button
+          class="guardar"
+          label="Guardar"
+          [loading]="isSaveInProgress"
+          type="submit"
+        />
+      </div>
+    </form>
+  </p-card>
+</div>
