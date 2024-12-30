@@ -14,12 +14,12 @@ export const routes: Routes = [
   {
     path: 'customer-form/:id',
     component: CustomerFormComponent,
-    title: 'Formulario de Clientes'
+    title: 'Customer Form'
   },
   {
     path: 'home',
     component: CustomerListComponent,
-    title: 'Página de Inicio'
+    title: 'Home'
   },
   {
     path: 'logIn',

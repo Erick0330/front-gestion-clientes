@@ -45,7 +45,7 @@ export class CustomerListComponent implements OnInit {
         this.messageService.add({
           severity: 'success',
           summary: 'Correcto',
-          detail: 'Cliente eliminado'
+          detail: 'Customer deleted'
         });
         this.isDeleteInProgress = false
         this.listCustomers();
@@ -55,7 +55,7 @@ export class CustomerListComponent implements OnInit {
         this.messageService.add({
           severity: 'error',
           summary: 'Error',
-          detail: 'No se pudo eliminar el cliente, revise si tiene la autorización'
+          detail: 'Fail to delete customer, you dont have the authorization'
         });
       }
     })

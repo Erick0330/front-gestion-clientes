@@ -95,3 +95,6 @@ a.custom-link:hover {
   font-size: 1.1rem;
 }
 
+.custom-card{
+  height: 100% !important;
+}

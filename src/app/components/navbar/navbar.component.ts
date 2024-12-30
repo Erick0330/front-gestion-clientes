@@ -28,7 +28,7 @@ export class NavbarComponent {
         this.messageService.add({
           severity: 'error',
           summary: 'Error',
-          detail: 'No tiene la autorización'
+          detail: 'You dont have the authorization'
         });
         this.router.navigateByUrl('/home')
       }

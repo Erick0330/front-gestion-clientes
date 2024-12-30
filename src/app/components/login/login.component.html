@@ -2,7 +2,7 @@
   <div class="body">
     <form [formGroup]="loginForm" (ngSubmit)="submitForm()">
       <img class="" src="/assets/R.png" width="250px" alt="">
-      <h2>Inicio de sesion</h2>
+      <h2>Log In</h2>
       <div class="form-floating mb-3">
         <input type="name" class="form-control" id="floatingInput" placeholder="name@example.com" formControlName="userName">
         <label for="floatingInput">Name</label>
@@ -13,7 +13,7 @@
       </div>
       <div class="d-grid gap-2">
         <button class="btn btn-primary"
-        type="submit" [disabled]="loginForm.invalid" >Button</button>
+        type="submit" [disabled]="loginForm.invalid" >Log In</button>
       </div>
       <!-- <div>
         <p class="mt-3">No tengo cuenta?

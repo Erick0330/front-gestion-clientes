@@ -17,26 +17,26 @@
           class="card-image"
         />
       </ng-template>
-      <p>Nombre y apellidos: {{ c.firstName }} {{ c.lastName }}</p>
+      <p>Name: {{ c.firstName }} {{ c.lastName }}</p>
       <ng-template pTemplate="footer">
         <div class="flex gap-1 mt-1">
           <p-button
             (onClick)="deleteCustomer(c.id)"
-            label="Borrar"
+            label="Delete"
             class="button-cancel"
           />
           <a
             routerLink="/customer-form/{{ c.id }}"
             class="custom-link button-edit p-button font-bold"
           >
-            Editar
+            Edit
           </a>
         </div>
       </ng-template>
     </p-card>
 
     }@empty {
-    <h2>No existen clientes</h2>
+    <h2>There are no clients</h2>
     }
   </div>
 </div>

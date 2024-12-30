@@ -67,7 +67,7 @@ export class CustomerFormComponent {
       error:()=>{
         this.messageService.add({severity: 'error',
           summary: 'Error',
-          detail: 'No tiene la autorización'
+          detail: 'You dont have the authorization'
         });
         this.router.navigateByUrl('/home')
       }
@@ -79,7 +79,7 @@ export class CustomerFormComponent {
       this.messageService.add({
         severity: 'error',
           summary: 'Error',
-          detail: 'Revise los campos e intente nuevamente'
+          detail: 'Check fields and try again'
       });
       return
     }
@@ -90,7 +90,7 @@ export class CustomerFormComponent {
         this.messageService.add({
           severity: 'success',
             summary: 'Guardado',
-            detail: 'Cliente guardado correctamente'
+            detail: 'Customer save succesfully'
         });
         this.isSaveInProgress=false
         this.router.navigateByUrl('/home')
@@ -100,7 +100,7 @@ export class CustomerFormComponent {
         this.messageService.add({
           severity: 'error',
             summary: 'Error',
-            detail: 'Revise los campos e intente nuevamente'
+            detail: 'Check fields and try again'
         });
       }
     })
@@ -112,7 +112,7 @@ export class CustomerFormComponent {
       this.messageService.add({
         severity: 'error',
           summary: 'Error',
-          detail: 'Seleccione una imagen e intente nuevamente'
+          detail: 'Select an image and try again'
       });
       return;
     }
@@ -123,7 +123,7 @@ export class CustomerFormComponent {
         this.messageService.add({
             severity: 'success',
             summary: 'Guardado',
-            detail: 'Imagen actualizada correctamente'
+            detail: 'Image updated succesfully'
         });
         this.isSaveInProgress=false
 
@@ -133,7 +133,7 @@ export class CustomerFormComponent {
         this.messageService.add({
           severity: 'error',
             summary: 'Error',
-            detail: 'Revise el archivo seleccionado'
+            detail: 'Check selected file'
         });
       },
     })
@@ -144,7 +144,7 @@ export class CustomerFormComponent {
       this.messageService.add({
         severity: 'error',
           summary: 'Error',
-          detail: 'Revise los campos e intente nuevamente'
+          detail: 'Check fields and try again'
       });
       return
     }
@@ -155,7 +155,7 @@ export class CustomerFormComponent {
         this.messageService.add({
           severity: 'success',
             summary: 'Guardado',
-            detail: 'Cliente actualizado correctamente'
+            detail: 'Customer updated succesfully'
         });
         this.isSaveInProgress=false
         this.router.navigateByUrl('/home')
@@ -165,7 +165,7 @@ export class CustomerFormComponent {
         this.messageService.add({
           severity: 'error',
             summary: 'Error',
-            detail: 'Revise los campos e intente nuevamente'
+            detail: 'Check fields and try again'
         });
       },
     })
