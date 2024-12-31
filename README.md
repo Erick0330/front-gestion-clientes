@@ -5,7 +5,7 @@
 Frontend of the customer management system built in Angular. It is focused on showing the functionality of the backend in SpringBoot, therefore great importance is not given to a particularly beautiful design, rather a functional one.
 
 <div align="center"> 
-  <img src="Captura de pantalla (69).png" width="48%" >
+  <img src="Captura de pantalla (71).png" width="48%">
   <img src="Captura de pantalla (67).png" width="48%" >
 </div>
 <div align="center">
@@ -13,7 +13,7 @@ Frontend of the customer management system built in Angular. It is focused on sh
 </div>
 <div align="center">
   <img src="Captura de pantalla (70).png" width="48%">
-  <img src="Captura de pantalla (71).png" width="48%">
+  <img src="Captura de pantalla (69).png" width="48%" >
 </div>
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.12.
 
