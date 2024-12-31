@@ -1,9 +1,9 @@
 # Customer Management System Frontend
 
 
-
-Frontend of the customer management system built in Angular. It is focused on showing the functionality of the backend in SpringBoot, therefore great importance is not given to a particularly beautiful design, rather a functional one.
-
+<div align="center" width="96%"> 
+Frontend of the customer management system. This allows testing all the functionalities of the customer management API from the following link in my repository: https://github.com/Erick0330/backend-gestion-clientes.git. It is built entirely in Angular and follows the responsive paradigm to show my skills in the design of user interfaces and their construction; a wide variety of external libraries were also used to emphasize my mastery in these, the libraries used were Bootstrap, Primeng and Primeflex. It is designed for a private website of a company that allows it to manage its customer databases. The program flow begins with an attractive and simple Landing Page, which then takes the user to log in, highlighting the implementation of powerful security. Once logged in, administrators have the authorization to add, delete, edit and obtain data from their clients, while the rest of the roles only have permissions to read information. At any time you can return to the landing page, log back in or read the data. Only administrators have permission to create     more users. All these business rules have been created to give more realism to this website and to show a great variety of my skills in web design and programming.
+</div>
 <div align="center"> 
   <img src="Captura de pantalla (71).png" width="48%">
   <img src="Captura de pantalla (67).png" width="48%" >
