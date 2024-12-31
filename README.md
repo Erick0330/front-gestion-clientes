@@ -9,7 +9,7 @@ Frontend of the customer management system built in Angular. It is focused on sh
   <img src="Captura de pantalla (67).png" width="48%">
 </div>
 <div>
-  <img src="Captura de pantalla (66).png">
+  <img src="Captura de pantalla (66).png" width="96">
 </div>
 <div>
   <img src="Captura de pantalla (70).png" width="48%">
