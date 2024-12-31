@@ -73,7 +73,7 @@ export class SignInComponent implements OnInit {
 
     this.service.register(formData as User).subscribe((response: any) => {
       console.log(response);
-      this.router.navigateByUrl('/logIn');
+      this.router.navigateByUrl('/home');
     },
       (error: any) => {
         console.error(error);
